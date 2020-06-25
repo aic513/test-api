@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('indicators', 'IndicatorController@index');
+Route::get('indicators/{id}', 'IndicatorController@show');
+Route::post('indicators', 'IndicatorController@store');
