@@ -38,8 +38,7 @@ class IndicatorService
 
     /**
      * @param $length
-     *
-     * @return false|string
+     * @return string
      */
     private static function getAlphanumeric($length)
     {
@@ -49,6 +48,7 @@ class IndicatorService
     }
 
     /**
+     * @param $length
      * @return string
      */
     private static function createGUID($length)
@@ -69,7 +69,6 @@ class IndicatorService
 
     /**
      * @param $length
-     *
      * @return int
      * @throws \Exception
      */

@@ -14,6 +14,6 @@ class IndicatorSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Indicator::class, 100)->create();
+        factory(App\Indicator::class, 50)->create();
     }
 }
