@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: docker/Nginx.Dockerfile
+    ports:
+      - 8095:80
+    links:
+      - fpm
+    volumes:
+      - ./:/var/www/laravel-api
+  fpm:
+    build:
+      context: .
+      dockerfile: docker/Fpm.Dockerfile
+    volumes:
+      - ./:/var/www/laravel-api

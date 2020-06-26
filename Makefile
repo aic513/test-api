@@ -1,6 +1,9 @@
 install:
 	composer install
 
+update:
+	composer update
+
 test:
 	composer run-script phpunit tests
 
@@ -9,3 +12,6 @@ run:
 
 dumpautoload:
 	composer dump-autoload --optimize
+
+migrate:
+	php artisan migrate:fresh --seed
